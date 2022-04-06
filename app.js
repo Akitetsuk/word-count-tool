@@ -5,7 +5,7 @@ Vue.createApp({
             test: '<strong>Hola!</strong>',
             nuevoId: 6,
             textInput: '',
-            showTextLength: ''
+            showTextLength: '',
         }
     },
     methods: {
@@ -15,13 +15,19 @@ Vue.createApp({
         calculate() {
             this.showTextLength = this.textInput;
         },
+
+    },
+    computed: {
         setColorNumber() {
-            // una función que est
+            // una función que está calculando un estado a partir de otro
             if (this.showTextLength.length % 2 == 0) {
-                return 'black';
+                return 'purple';
             }
 
-            return 'red';
+            return 'yellow';
+        },
+        getTextLength() {
+            return this.showTextLength.length;
         }
     }
 

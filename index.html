@@ -18,7 +18,8 @@
         <div v-html="test" :id="nuevoId"> </div>
         <div> {{ saludar('Pepe') }} </div>
         <input v-model="textInput" type="text" id="str">
-        <div :style="{'color': setColorNumber() }" v-if="showTextLength" id="output"> {{ showTextLength.length }} </div>
+        <div :style="{'color': setColorNumber }" style="font-size: 28px; font-weight: 700;" v-if="showTextLength"
+            id="output"> {{ getTextLength }} </div>
         <button @click="calculate" id="btn">
             <h2>Click to calculate word length</h2>
         </button>
