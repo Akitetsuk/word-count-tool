@@ -1,9 +1,28 @@
-let button = document.getElementById('btn');
+Vue.createApp({
+    data() {
+        return {
+            // Estado de la app
+            test: '<strong>Hola!</strong>',
+            nuevoId: 6,
+            textInput: '',
+            showTextLength: ''
+        }
+    },
+    methods: {
+        saludar(nombre) {
+            return 'Alo!!!!!' + nombre;
+        },
+        calculate() {
+            this.showTextLength = this.textInput;
+        },
+        setColorNumber() {
+            // una función que est
+            if (this.showTextLength.length % 2 == 0) {
+                return 'black';
+            }
 
-button.addEventListener('click', function(){
-    let word = document.getElementById('str').value;
-    let count = word.length;
-    let outputDiv = document.getElementById('output');
+            return 'red';
+        }
+    }
 
-    outputDiv.innerHTML = `<h1>${count}</h1>`
-});
+}).mount('#app')
